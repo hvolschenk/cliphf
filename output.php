@@ -1,5 +1,4 @@
 <?php
-  namespace Rwdg\Cli\Utils;
   class Output {
 
     private static $map = [
