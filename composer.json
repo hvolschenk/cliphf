@@ -1,0 +1,16 @@
+{
+  "name": "hvolschenk/cliphf",
+  "description": "PHP Cli Formatting library.",
+  "require": {
+    "php": "^7.0"
+  },
+  "keywords": ["cli", "php", "formatter", "formatting"],
+  "homepage": "https://github.com/righteous-trespasser/CliPhF",
+  "authors": [
+    {
+      "name": "Hendrik Volschenk",
+      "email": "righteous.trespasser@gmail+pkg.com",
+      "homepage": "http://hvolschenk.co.za"
+    }
+  ],
+}
