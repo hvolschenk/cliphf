@@ -1,4 +1,5 @@
 <?php
+  namespace Cliphf;
   class Output {
 
     private static $map = [

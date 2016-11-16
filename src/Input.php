@@ -1,4 +1,5 @@
 <?php
+  namespace Cliphf;
   class Input {
 
     private $prompting = false;

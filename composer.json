@@ -13,5 +13,10 @@
       "email": "righteous.trespasser@gmail.com",
       "homepage": "http://hvolschenk.co.za"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "Cliphf\\": "src"
+    }
+  }
 }
