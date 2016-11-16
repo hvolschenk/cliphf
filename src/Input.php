@@ -2,8 +2,6 @@
   namespace Cliphf;
   class Input {
 
-    private $prompting = false;
-
     private static function testBash() {
       $command = "/usr/bin/env bash -c 'echo OK'";
       if (rtrim(shell_exec($command)) !== 'OK') {
