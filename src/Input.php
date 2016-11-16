@@ -1,5 +1,5 @@
 <?php
-  namespace Cliphf;
+  namespace Hvolschenk\Cliphf;
   class Input {
 
     private static function testBash() {

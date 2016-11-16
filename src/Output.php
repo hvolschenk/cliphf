@@ -1,5 +1,5 @@
 <?php
-  namespace Cliphf;
+  namespace Hvolschenk\Cliphf;
   class Output {
 
     private static $map = [
