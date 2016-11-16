@@ -5,6 +5,7 @@
     "php": "^7.0"
   },
   "keywords": ["cli", "php", "formatter", "formatting"],
+  "licence": "MIT",
   "homepage": "https://github.com/righteous-trespasser/CliPhF",
   "authors": [
     {
