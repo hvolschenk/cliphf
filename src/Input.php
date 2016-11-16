@@ -25,9 +25,10 @@
       return self::getInput($label);
     }
 
-    public static function password(string $label, string $after): string {
+    public static function password(string $label,
+      string $after = '*****'): string {
       $password = self::getInput($label, true);
-      Output::format($after ?? '*****');
+      Output::format($after);
       return $password;
     }
 
