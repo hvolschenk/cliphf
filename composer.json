@@ -2,11 +2,12 @@
   "name": "hvolschenk/cliphf",
   "description": "PHP Cli Formatting library.",
   "require": {
-    "php": "^7.0"
+    "php": "^7.0",
+    "hvolschenk/compose": "^1.0.0"
   },
   "keywords": ["cli", "php", "formatter", "formatting"],
   "license": "MIT",
-  "homepage": "https://github.com/righteous-trespasser/CliPhF",
+  "homepage": "https://github.com/hvolschenk/cliphf",
   "authors": [
     {
       "name": "Hendrik Volschenk",

@@ -1,5 +1,6 @@
 <?php
   namespace Hvolschenk\Cliphf;
+  use Hvolschenk\Utils\Compose;
   class Output {
 
     private static $map = [
@@ -39,34 +40,34 @@
       '{break}' => "\n"
     ];
 
-    private static function curry(string $className, array $functions):string {
-      return array_reduce($functions, function($result, $function) {
-        return call_user_func(array('self', $function), $result);
-      }, $className);
-    }
-
     public static function format(string $message, bool $break = true) {
-      $functions = ['applyFormatting', 'endFormatting', 'marryNeighbours'];
-      if ($break) {
-        $functions[] = 'addBreak';
-      }
-      echo self::curry($message, $functions);
+      $functions = self::getFunctionsList($break);
+      echo Compose::compose($message,
+        Compose::addClassNames('Hvolschenk\Cliphf\Output', $functions));
     }
 
-    private static function applyFormatting(string $message): string {
+    public static function _applyFormatting(string $message): string {
       return str_replace(array_keys(self::$map), self::$map, $message);
     }
 
-    private static function endFormatting(string $message): string {
+    public static function _endFormatting(string $message): string {
       return $message . self::$map['{remove}'];
     }
 
-    private static function marryNeighbours(string $message): string {
+    public static function _marryNeighbours(string $message): string {
       return str_replace('me\[', ';', $message);
     }
 
-    private static function addBreak(string $message): string {
+    public static function _addBreak(string $message): string {
       return $message . self::$map['{break}'];
+    }
+
+    private static function getFunctionsList(bool $break) {
+      $functions = ['_applyFormatting', '_endFormatting', '_marryNeighbours'];
+      if ($break) {
+        $functions[] = '_addBreak';
+      }
+      return $functions;
     }
 
   }
