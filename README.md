@@ -24,6 +24,8 @@ $ git clone https://github.com/righteous-trespasser/cliphf.git
 You can format output for the command line with the `Output::format` static method. It takes in only one argument and that is the string to be formatted. You can specify formats in an HTML-like syntax as in the following example:
 
 ```php
+use Hvolschenk\Cliphf;
+
 Output::format('{italic}Checking config{/italic}...');
 if ($something === true) {
   Output::format('{bold}{green}Done.{/green}{/bold}')
@@ -42,6 +44,8 @@ $password = Input::password('Secret password: ');
 Input text can also be formatted and uses the output class to format text:
 
 ```php
+use Hvolschenk\Cliphf;
+
 $name = Input::text('{bold}{underline}Dangerous input:{/underline}{/bold}');
 ```
 
