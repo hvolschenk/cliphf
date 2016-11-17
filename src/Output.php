@@ -46,8 +46,7 @@
     }
 
     public static function format(string $message, bool $break = true) {
-      $functions = ['applyFormatting', 'endFormatting',
-        'marryNeighbours'];
+      $functions = ['applyFormatting', 'endFormatting', 'marryNeighbours'];
       if ($break) {
         $functions[] = 'addBreak';
       }
