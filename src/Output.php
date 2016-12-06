@@ -1,7 +1,8 @@
 <?php
   namespace Hvolschenk\Cliphf;
-  use Hvolschenk\Utils\Compose;
   class Output {
+
+    use \Hvolschenk\Traits\Compose;
 
     private static $map = [
       '{blink}' => "\e[5m",
@@ -41,9 +42,7 @@
     ];
 
     public static function format(string $message, bool $break = true) {
-      $functions = self::getFunctionsList($break);
-      echo Compose::compose($message,
-        Compose::addClassNames('Hvolschenk\Cliphf\Output', $functions));
+      echo self::compose($message, self::getFunctionsList($break));
     }
 
     public static function _applyFormatting(string $message): string {
