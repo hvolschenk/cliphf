@@ -3,7 +3,7 @@
   "description": "PHP Cli Formatting library.",
   "require": {
     "php": "^7.0",
-    "hvolschenk/compose": "^1.1.0"
+    "hvolschenk/compose": "^1.2.0"
   },
   "keywords": ["cli", "php", "formatter", "formatting"],
   "license": "MIT",

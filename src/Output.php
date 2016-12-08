@@ -45,26 +45,26 @@
       echo self::compose($message, self::getFunctionsList($break));
     }
 
-    public static function _applyFormatting(string $message): string {
+    public static function applyFormatting(string $message): string {
       return str_replace(array_keys(self::$map), self::$map, $message);
     }
 
-    public static function _endFormatting(string $message): string {
+    public static function endFormatting(string $message): string {
       return $message . self::$map['{remove}'];
     }
 
-    public static function _marryNeighbours(string $message): string {
+    public static function marryNeighbours(string $message): string {
       return str_replace('me\[', ';', $message);
     }
 
-    public static function _addBreak(string $message): string {
+    public static function addBreak(string $message): string {
       return $message . self::$map['{break}'];
     }
 
     private static function getFunctionsList(bool $break) {
-      $functions = ['_applyFormatting', '_endFormatting', '_marryNeighbours'];
+      $functions = ['applyFormatting', 'endFormatting', 'marryNeighbours'];
       if ($break) {
-        $functions[] = '_addBreak';
+        $functions[] = 'addBreak';
       }
       return $functions;
     }
